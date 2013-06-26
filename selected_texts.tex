@@ -1,0 +1,194 @@
+%\title{selected_texts_a}
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article}
+\addtolength{\parskip}{.5\baselineskip}
+\usepackage[a4paper]{geometry}
+%\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}
+\usepackage{amssymb,amsmath}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}%\usepackage[latin1]{inputenc}
+%\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{hyperref}
+\usepackage{datetime}
+\title{Selected Texts} 
+\author{Pierre-Yves Gaillard} 
+\date{\today, \currenttime} 
+\newcommand{\C}{\mathbb C} 
+\newcommand{\n}{\noindent} 
+\newcommand{\so}{\bigskip} 
+\newcommand{\ii}{\hskip1em}
+\newcommand{\f}{\footnotesize} 
+\begin{document} 
+\maketitle 
+
+%Selected Texts 
+I put together four short texts I have written. 
+
+\tableofcontents 
+% 
+\newpage 
+% 
+\section{The Fundamental Theorem of Galois Theory (FTGT)} 
+%
+\n{\footnotesize\textbf{Abstract.} We give a short and self-contained proof of the Fundamental Theorem of Galois Theory (FTGT) for finite degree extensions.}\so
+
+\n We derive the FTGT (for finite degree extensions) from two statements, denoted (a) and (b). These two statements, and the way they are proved here, go back at least to Emil Artin (precise references are given below).
+
+The argument is essentially taken from Chapter II of Emil Artin's Notre Dame Lectures [A]. More precisely, statement (a) below is implicitly contained in the proof Theorem 10 page 31 of [A], in which the uniqueness up to isomorphism of the splitting field of a polynomial is verified. Artin's proof shows in fact that, when the roots of the polynomial are distinct, the number of automorphisms of the splitting extension coincides with the degree of the extension. Statement (b) below is proved as Theorem 14 page 42 of [A]. The proof given here (using Artin's argument) was written with Keith Conrad's help.\so
+
+\centerline{\textbf{Theorem}} 
+
+\n Let $E/F$ be an extension of fields, let $a_1,\dots,a_n$ be distinct generators of $E/F$ such that $p:=(X-a_1)\cdots(X-a_n)$ is in $F[X]$. Then
+
+$\bullet$ the group $G$ of automorphisms of $E/F$ is finite,
+
+$\bullet$ there is a bijective correspondence between the sub-extensions $S/F$ of $E/F$ and the subgroups $H$ of $G$, and we have
+$$
+S\leftrightarrow H\iff H=\text{Aut}(E/S)\iff S=E^H\implies[E:S]=|H|,
+$$
+where $E^H$ is the fixed subfield of $H$, where $[E:S]$ is the degree (that is the dimension) of $E$ over $S$, and where $|H|$ is the order of $H$.\so
+
+\centerline{\textbf{Proof}} 
+
+\n We claim:  
+
+(a) If $S/F$ is a sub-extension of $E/F$, then $[E:S]=|\text{Aut}(E/S)|$.  
+
+(b) If $H$ is a subgroup of $G$, then $|H|=[E:E^H]$.  
+
+\n\textbf{Proof that (a) and (b) imply the theorem.} Let $S/F$ be a sub-extension of $E/F$ and put $H:=\text{Aut}(E/S)$. Then we have trivially $S\subset E^H$, and (a) and (b) imply 
+$$
+[E:S]=[E:E^H].
+$$
+Conversely let $H$ be a subgroup of $G$ and set $\overline H:=\text{Aut}(E/E^H)$. Then we have trivially $H\subset\overline H$, and (a) and (b) imply $|H|=|\overline H|$.
+
+\n\textbf{Proof of (a).} Let $1\le i\le n$. Put $K:=S[a_1,\dots,a_{i-1}]$ and $d:=[K[a_i]:K]$. It suffices to check that any $F$-embedding $\phi$ of $K$ in $E$ has exactly $d$ extensions to an $F$-embedding $\Phi$ of $K[a_i]$ in $E$. Let $q\in K[X]$ be the minimal polynomial of $a_i$ over $K$. It is enough to verify that $\phi(q)$ (the image under $\phi$ of $q$) has $d$ distinct roots in $E$. But this is clear since $q$ divides $p$, and thus $\phi(q)$ divides $\phi(p)=p$.
+
+\n\textbf{Proof of (b).} In view of (a) it is enough to check $|H|\ge[E:E^H]$. Let $k$ be an integer larger than $|H|$, and pick a 
+$$
+b=(b_1,\dots,b_k)\in E^k.
+$$
+We must show that the $b_i$ are linearly dependent over $E^H$, or equivalently that $b^\perp\cap(E^H)^k$ is nonzero, where $\bullet^\perp$ denotes the vectors orthogonal to $\bullet$ in $E^k$ with respect to the dot product on $E^k$. Any element of $b^\perp\cap (E^H)^k$ is necessarily orthogonal to $hb$ for any $h\in H$, so 
+$$
+b^\perp\cap(E^H)^k=(Hb)^\perp\cap(E^H)^k,
+$$ 
+where $Hb$ is the $H$-orbit of $b$. We will show that $(Hb)^\perp\cap(E^H)^k$ is nonzero. Since the span of $Hb$ in $E^k$ has $E$-dimension at most $|H|<k$, $(Hb)^\perp$ is nonzero. Choose a nonzero vector $x$ in $(Hb)^\perp$ such that $x_i=0$ for the largest number of $i$ as possible among all nonzero vectors in $(Hb)^\perp$. Some coordinate $x_j$ is nonzero in $E$, so by scaling we can assume $x_j=1$ for some $j$. Since the subspace $(Hb)^\perp$ in $E^k$ is stable under the action of $H$, for any $h$ in $H$ we have $hx \in(Hb)^\perp$, so $hx-x\in(Hb)^\perp$. Since $x_j=1$, the $j$-th coordinate of $hx-x$ is $0$, so $hx-x=0$ by the choice of $x$. Since this holds for all $h$ in $H$, $x$ is in $(E^H)^k$.\so
+
+\n[A] Emil Artin, Galois Theory, Lectures Delivered at the University of Notre Dame, Chapter II: 
+\href{http://projecteuclid.org/euclid.ndml/1175197045}{http://projecteuclid.org/euclid.ndml/1175197045}. 
+% 
+\newpage 
+%
+\section{Function of a Matrix} 
+%
+\n{\footnotesize\textbf{Abstract.} Let $a$ be a square matrix with complex entries and $f$ a function holomorphic on an open subset $U$ of the complex plane. It is well known that $f$ can be evaluated on $a$ if the spectrum of $a$ is contained in $U$. We show that, for a fixed $f$, the resulting matrix depends holomorphically on $a$.}
+
+The following was explained to me by Jean-Pierre Ferrier.
+
+For any matrix $a$ in $A:=M_n(\C)$, write $\Lambda(a)$ for the set of eigenvalues of $a$. Let $U$ be an open subset of $\C$, and let $U'$ be the subset of $A$, which is open by Rouch\'e's Theorem, defined by the condition $\Lambda(a)\subset U$. Let $a$ be in $U'$, let $X$ be an indeterminate, and let $\mathcal O(U)$ be the $\C$-algebra of holomorphic functions on $U$. Equip $\mathcal O(U)$ and $\C[a]$ with the $\C[X]$-algebra structures associated respectively with the element $z\mapsto z$ of $\mathcal O(U)$ and the element $a$ of $\C[a]$. 
+
+\n\textbf{Theorem.} (i) \emph{There is a unique $\C[X]$-algebra morphism from $\mathcal O(U)$ to $\C[a]$. We denote this morphism by $f\mapsto f(a)$.}
+
+\n(ii) \emph{There is an $r>0$ and a neighborhood $N$ of $a$ in $A$ such that 
+$$
+f(b)=\frac{1}{2\pi i}\ \sum_{\lambda\in\Lambda(a)}\ \int_{|z-\lambda|=r}\ \frac{f(z)}{z-b}\ dz
+$$
+for all $f$ in $\mathcal O(U)$ and all $b$ in $N$. In particular the map $b\mapsto f(b)$ from $U'$ to $A$ is holomorphic.}
+
+\n\textbf{Proof.} By the Chinese Remainder Theorem, $\C[a]$ is isomorphic to the product of $\C[X]$-algebras of the form $\C[X]/(X-\lambda)^m$, with $\lambda\in\C$. So we can assume that $\C[a]$ is of this form, and (i) is clear. To prove (ii) we can keep on assuming $\C[a]\simeq\C[X]/(X-\lambda)^m$. On replacing $a$ with $a-\lambda$, we can even assume $a^n=0$. Choose $r>0$ so that $U$ contains the closed disk of radius $r$ centered at $0$, let $N$ be the set of those $b$ in $A$ whose eigenvalues $\lambda$ satisfy $|\lambda|<r/2$, and let $b$ be in $N$. Replacing $a$ with $b$ in the above argument, we can assume $b^n=0$. Now (ii) follows from Cauchy's Integral Formula and the equalities
+$$
+f(b)=\sum_{k=0}^{n-1}\ \frac{f^{(k)}(0)}{k!}\ b^k,\quad 
+\frac{1}{z-b}=\sum_{k=0}^{n-1}\ \frac{b^k}{z^{k+1}}\quad.
+$$ 
+% 
+\newpage 
+%
+\section{Zorn's Lemma} 
+%
+\n{\footnotesize\textbf{Abstract.} We give a short proof of Zorn's Lemma.}
+
+Let $P$ be a poset. Assume that all well-ordered subsets of $P$ have an upper bound, and that $P$ has no maximal element. We'll get a contradiction. 
+
+For any pair $I\subset S$ of subsets of $P$, say that $I$ is an \textbf{initial segment} of $S$ if $S\ni s<i\in I$ implies $s\in I$. For any well-ordered subset $W$ of $P$ choose an element $p(W)$ in $P_{>W}$, \textit{i.e.} $p(W)\in P$ and $p(W)>w$ for all $w$ in $W$. Let $\mathcal W$ be the set of those well-ordered subsets $W$ of $P$ such that $p(W_{<w})=w$ [self-explanatory notation] for all $w$ in $W$, and let $U\subset P$ be the union of $\mathcal W$. 
+
+We claim that $U$ is in $\mathcal W$. This will give the contradiction $U\cup\{p(U)\}\in\mathcal W$. 
+
+We have: 
+
+(a) if $W,X$ are in $\mathcal W$, then $W$ is an initial segment of $X$, or $X$ is an initial segment of $W$; in particular $U$ is totally ordered;
+
+(b) any $W\in\mathcal W$ is an initial segment of $U$; 
+
+(c) $U$ is in $\mathcal W$.
+
+To prove (a) let $I$ be the set of those $p$ in $P$ which belong to some initial segment common to $W$ and $X$. Then $I$ is the largest such initial segment. Moreover $I$ is equal to $W$ or to $X$ because otherwise $I\cup\{p(I)\}$ would contradict the maximality of $I$, for, $W$ and $X$ being well-ordered, we would have $W_{<w}=I=X_{<x}$ for some $w$ in $W$ and some $x$ in $X$, yielding $w=p(I)=x$. 
+
+Now (b) follows from (a). 
+
+We prove (c). To check that $U$ is well-ordered, let $A$ be a nonempty subset of $U$, choose a $W$ in $\mathcal W$ which meets $A$, let $m$ be the minimum of $W\cap A$, and let $a$ be in $A$. We must show $m\le a$. If such was not the case, (a) would imply $a<m$, in contradiction with (b). It remains to prove $p(U_{<u})=u$ for $u$ in $U$, that is, $U_{<u}\subset W$ for $u\in W\in\mathcal W$. This follows from (b). 
+% 
+\newpage 
+%
+\section{Excerpts from "Set Theory and the Continuum Hypothesis" by Paul Cohen} 
+%
+\centerline{\textbf{Main excerpt (definition of truth --- beginning of Section I.4, p. 11)}}
+
+Having now given rules for forming valid statements we come to the problem of identifying these statements with the intuitively ``true'' statements. This discussion will be carried out in the spirit of traditional mathematics, that is to say, outside of any formal language. We shall use some elementary notions of set theory. After we have formalized set theory itself, then of course this discussion can he expressed in that formal system. In our original discussion, we had a finite number of symbols. This was important for foundational purposes, in order to reduce mathematics to a formal game playable by a computing machine. However, for some purposes it is of interest to allow arbitrarily many constant and relation symbols. We write the proofs of Sections 4 and 5 for this more general case.
+
+Assume now that we are dealing with a collection $S$ of statements involving constants $c_\alpha$, $\alpha\in I$, and relation symbols $R_\beta$, $\beta\in J$, where each $R_\beta$ has a fixed number of variables. Let $M$ be a non-empty set and let $c_\alpha\to\overline{c}_\alpha$ be a map from the constant symbols to elements of $M$, not necessarily distinct, and $R_\beta\to\overline{R}_\beta$ a map which associates to a $k$-ary relation symbol, a subset of the $k$-fold direct product, $M\times M\times\cdots\times M$. We shall then say that we have an interpretation of the constants $c_\alpha$ and the relation symbols $R_\beta$ in the set $M$. To every statement using only these constant symbols and relation symbols, we shall associate its ``truth value'' under this interpretation. Intuitively, of course, we merely mean whether or not the statement is true in $M$ under the given interpretation of the constant and relation symbols. However, a precise definition is easy to give if we proceed by induction on the length of formulas. 
+
+\n DEFINITION. Let $A$ be a formula with free variables among $x_1,\dots,x_n$, $n \ge 0$, and let $\overline{x}_1, \dots, \overline{x}_n$ be elements of $M$. We define the truth value of $A$ (in $M$) at $\overline{x}_1,\dots,\overline{x}_n$.
+
+\n 1. If $A$ is of the form $x_i=x_j$, $x_i=c$, or $c_i=c_j$, then $A$ is true at $\overline{x}_1,\dots,\overline{x}_n$ if $\overline{x}_i=\overline{x}_j$, $\overline{x}_i=\overline{c}$, or $\overline{c}_i=\overline{c}_j$, respectively. 
+
+\n 2. If $A$ is $R(t_1,\dots,t_m)$ where $R$ is an $m$-ary relation symbol and each $t_i$ is a constant symbol or one of the $x_1,\dots,x_n$, then $A$ is true at $\overline{x}_1,\dots,\overline{x}_n$ if the $m$-tuple $\langle\overline{t}_1,\dots,\overline{t}_m\rangle$ is in $\overline{R}$ (the subset of $M^m$ associated with $R$ under the given interpretation).
+
+\n 3. If $A$ is a propositional function of formulas, we evaluate the truth of $A$ at $\overline{x}_1,\dots,\overline{x}_n$ by means of the propositional calculus. 
+
+\n 4. If $A$ is of the form $(\forall y)B(y,x_1,\dots,x_n)$ [resp. $(\exists y)B(y,x_1,\dots,x_n)$] then $A$ is true at $\overline{x}_1,\dots,\overline{x}_n$ if, for all $\overline{y}$ in $M$ [resp. for some $\overline{y}$ in $M$] $B(y,x_1,\dots,x_n)$ is true at $\overline{y},\overline{x}_1,\dots,\overline{x}_n$.\bigskip
+
+\centerline{*}%\bigskip
+
+\centerline{\textbf{Other excerpts}}
+
+It should be emphasized that these functions are ``real" mathematical objects and not objects of any formal system \dots [Section I.7, p. 26.] 
+
+The theorems of the previous section are not results about what can be proved in particular axiom systems; they are absolute statements about functions. [Section I.9, p.~39.] 
+
+We have now arrived at a rather peculiar situation. On the one hand $\sim\kern-1ex A$ is not provable in $Z_1$ and yet we have just given an informal proof that $\sim\kern-1ex A$ is true. (There is no contradiction here since we have merely shown that the proofs in $Z_1$ do not exhaust the set of all acceptable arguments.) [Section I.9, p. 41.] 
+
+The requirement that the axioms be given recursively is essential; otherwise we could take for $\Sigma$ the set of all true statements of $Z_1$. [Section I.10, p. 45.]\bigskip
+
+\centerline{*}\bigskip
+
+\centerline{\textbf{An excerpt from Kleene}}%\nopagebreak
+
+The terms: $0, 0', 0''$, \dots, which represent the particular natural numbers under the interpretation of the system, we call \textit{numerals}, and we abbreviate them by the same symbols ``0'',  ``1'',  ``2'', \dots, respectively, as we use for natural numbers intuitively (\dots). Moreover, whenever we have introduced an italic letter, such as ``$x$'', to designate an intuitive natural number, then the corresponding bold italic letter ``$\pmb{x}$'' shall designate the corresponding 
+numeral $0^{(x)}$, i.e. $0^{'\cdots'}$ with $x$ accents ($x\ge0$) \dots\smallskip
+
+Let $P(x_1,\dots,x_n)$ be an intuitive number-theoretic predicate. We say that $P(x_1,\dots,x_n)$ is \textit{numeralwise expressible} in the formal system, if there is a formula $\mbox{P}(\mbox{x}_1,\dots,\mbox{x}_n)$ with no free variables other than the distinct variables $\mbox{x}_1,\dots,\mbox{x}_n$ such that, for each particular $n$-tuple of natural numbers $x_1,\dots,x_n$, \smallskip
+
+(i) \ if $P(x_1,\dots,x_n)$ is true, then $\mbox{P}(\pmb{x}_1,\dots,\pmb{x}_n)$ is provable, and \smallskip
+
+(ii) if $P(x_1,\dots,x_n)$ is false, then ``not $\mbox{P}(\pmb{x}_1,\dots,\pmb{x}_n)$'' is provable. 
+
+\n[\S\ 41, p. 195, Kleene S.; \textbf{Introduction to Metamathematics}, New York, Van Nostrand 1952.] 
+% 
+\newpage 
+% 
+\n This text is available in tex and/or pdf format 
+
+\n$\bullet$ on my web page: \href{http://www.iecn.u-nancy.fr/~gaillapy/}{http://www.iecn.u-nancy.fr/$\sim$gaillapy/}, 
+
+%\n$\bullet$ at figshare in pdf format: \href{http://figshare.com/articles/Zorn_s_Lemma/677106}{http://figshare.com/articles/Zorn\_s\_Lemma/677106} 
+
+%\n$\bullet$ at figshare in tex format: \href{http://figshare.com/articles/Zorn_Lemma_tex_/678324}{http://figshare.com/articles/Zorn\_Lemma\_tex\_/678324} 
+
+\n$\bullet$ at github in tex format: \href{https://github.com/Pierre-Yves-Gaillard/matrix}{https://github.com/Pierre-Yves-Gaillard/zorn} 
+
+\n$\bullet$ at writeLaTeX in tex and pdf format: \href{https://www.writelatex.com/245642vdhjtd}{https://www.writelatex.com/245642vdhjtd} 
+
+\n$\bullet$ as a Google document in tex format: \href{http://goo.gl/fPQLo}{http://goo.gl/fPQLo} 
+% 
+\end{document} 
