@@ -1,4 +1,4 @@
-% \title{selected_texts_d}
+%\title{selected_texts_e}
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -25,11 +25,11 @@
 I put together four short texts I have written. 
 
 \tableofcontents 
-% 
+
 \newpage 
-% 
+
 \section{The Fundamental Theorem of Galois Theory} 
-%
+
 \nn{\footnotesize\textbf{Abstract.} We give a short and self-contained proof of the Fundamental Theorem of Galois Theory (FTGT) for finite degree extensions.}\so
 
 \nn We derive the FTGT (for finite degree extensions) from two statements, denoted (a) and (b). These two statements, and the way they are proved here, go back at least to Emil Artin (precise references are given below).
@@ -93,7 +93,7 @@ Let $U$ be an open subset of $\C$, and let $U'$ be the subset of $A$, which is o
 
 \nn(ii) \emph{We have} 
 $$
-f(a)=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{f^{(k)}(\lambda)}{k!}\ (a_\lambda-\lambda_\lambda)^k.
+f(a)=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{f^{(k)}(\lambda)_\lambda}{k!}\ (a-\lambda)^k.
 $$
 
 \nn\textit{Proof}. By the Chinese Remainder Theorem, $\C[a]$ is isomorphic to the product of $\C[X]$-algebras of the form $\C[X]/(X-\lambda)^m$, with $\lambda\in\C$. So we can assume that $\C[a]$ is of this form, and the lemma follows from the fact that, for any $f$ in $\mathcal O(U)$, there is unique $g$ in $\mathcal O(U)$ such that 
@@ -114,28 +114,27 @@ for all $f$ in $\mathcal O(U)$ and all $b$ in $N$. In particular the map $b\maps
 $$
 \frac{1}{2\pi i}\int_\gamma\ \frac{f(z)}{z-b}\ dz
 $$
-%$$=\frac{1}{2\pi i}\int_\gamma\ f(z)\left(\sum_{\lambda\in\Lambda(a)}\frac{1}{z_\lambda-b_\lambda}\right)dz$$
 $$
-=\frac{1}{2\pi i}\int_\gamma\ f(z)\sum_{\lambda\in\Lambda(a)}\frac{1_\lambda}{z-b}\ dz
-$$
-$$
-=\sum_{\lambda\in\Lambda(a)}\frac{1}{2\pi i}\int_\gamma\ \frac{f(z)_\lambda}{z-b}\ dz
+=\frac{1}{2\pi i}\int_\gamma\ \frac{f(z)}{z-b}\ \sum_{\lambda\in\Lambda(a)}1_\lambda\ dz
 $$
 $$
-=\sum_{\lambda\in\Lambda(a)}\frac{1}{2\pi i}\int_\gamma\ \frac{f(z)_\lambda\ dz}{(z-\lambda)-(b-\lambda)}
+=\sum_{\lambda\in\Lambda(a)}\frac{1_\lambda}{2\pi i}\int_\gamma\ \frac{f(z)}{z-b}\ dz
 $$
 $$
-=\sum_{\lambda\in\Lambda(a)}\frac{1}{2\pi i}\int_\gamma\ f(z)\ \sum_{k=0}^{n-1}
-\frac{(b_\lambda-\lambda_\lambda)^k}{(z-\lambda)^{k+1}}\ dz
+=\sum_{\lambda\in\Lambda(a)}\frac{1_\lambda}{2\pi i}\int_\gamma\ \frac{f(z)\ dz}{(z-\lambda)-(b-\lambda)}
 $$
 $$
-=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{1}{2\pi i}\int_\gamma\ \frac{f(z)\ dz}{(z-\lambda)^{k+1}}\ (b_\lambda-\lambda_\lambda)^k
+=\sum_{\lambda\in\Lambda(a)}\frac{1_\lambda}{2\pi i}\int_\gamma\ f(z)\sum_{k=0}^{n-1}
+\frac{(b-\lambda)^k}{(z-\lambda)^{k+1}}\ dz
 $$
 $$
-\overset{(*)}{=}\sum_{\lambda\in\Lambda(a),0\le k<n}I(\gamma,\lambda)\ \frac{f^{(k)}(\lambda)}{k!}\ (b_\lambda-\lambda_\lambda)^k
+=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{1_\lambda}{2\pi i}\int_\gamma\ \frac{f(z)\ dz}{(z-\lambda)^{k+1}}\ (b-\lambda)^k
 $$
 $$
-=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{f^{(k)}(\lambda)}{k!}\ (b_\lambda-\lambda_\lambda)^k
+\overset{(*)}{=}\sum_{\lambda\in\Lambda(a),0\le k<n}I(\gamma,\lambda)\ \frac{f^{(k)}(\lambda)_\lambda}{k!}\ (b-\lambda)^k
+$$
+$$
+=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{f^{(k)}(\lambda)_\lambda}{k!}\ (b-\lambda)^k
 $$
 $$
 \overset{(**)}{=}f(b),
@@ -167,11 +166,11 @@ To prove (a) let $I$ be the set of those $p$ in $P$ which belong to some initial
 Now (b) follows from (a). 
 
 We prove (c). To check that $U$ is well-ordered, let $A$ be a nonempty subset of $U$, choose a $W$ in $\mathcal W$ which meets $A$, let $m$ be the minimum of $W\cap A$, and let $a$ be in $A$. We must show $m\le a$. If such was not the case, (a) would imply $a<m$, in contradiction with (b). It remains to prove $p(U_{<u})=u$ for $u$ in $U$, that is, $U_{<u}\subset W$ for $u\in W\in\mathcal W$. This follows from (b). 
-% 
+
 \newpage 
-%
+
 \section{Excerpts from "Set Theory and the Continuum Hypothesis" by Paul Cohen} 
-%
+
 \centerline{\textbf{Main excerpt (definition of truth --- beginning of Section I.4, p. 11)}}
 
 Having now given rules for forming valid statements we come to the problem of identifying these statements with the intuitively ``true'' statements. This discussion will be carried out in the spirit of traditional mathematics, that is to say, outside of any formal language. We shall use some elementary notions of set theory. After we have formalized set theory itself, then of course this discussion can he expressed in that formal system. In our original discussion, we had a finite number of symbols. This was important for foundational purposes, in order to reduce mathematics to a formal game playable by a computing machine. However, for some purposes it is of interest to allow arbitrarily many constant and relation symbols. We write the proofs of Sections 4 and 5 for this more general case.
@@ -214,8 +213,6 @@ Let $P(x_1,\dots,x_n)$ be an intuitive number-theoretic predicate. We say that $
 (ii) if $P(x_1,\dots,x_n)$ is false, then ``not $\mbox{P}(\pmb{x}_1,\dots,\pmb{x}_n)$'' is provable. 
 
 \nn[\S\ 41, p. 195, Kleene S.; \textbf{Introduction to Metamathematics}, New York, Van Nostrand 1952.]
-
-%\end{document}
 
 \newpage 
 
