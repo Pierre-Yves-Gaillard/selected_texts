@@ -1,4 +1,4 @@
-%\title{Selected Texts}selected_texts_f
+%\title{Selected Texts}selected_texts_g
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \addtolength{\parskip}{.5\baselineskip}
@@ -87,24 +87,26 @@ The following was explained to me by Jean-Pierre Ferrier, and Ahmed Jeddi made u
 
 For any matrix $a$ in $A:=M_n(\C)$, write $\Lambda(a)$ for the set of eigenvalues of $a$. For each $\lambda$ in $\Lambda(a)$, write $1_\lambda\in\C[a]$ for the projector onto the $\lambda$-generalized eigenspace parallel to the other generalized eigenspaces, and put $a_\lambda:=a1_\lambda$, and $z_\lambda:=z1_\lambda$ for $z$ in $\C$. 
 
-Let $U$ be an open subset of $\C$, and let $U'$ be the subset of $A$, which is open by Rouch\'e's Theorem, defined by the condition $\Lambda(a)\subset U$. Let $a$ be in $U'$, let $X$ be an indeterminate, and let $\mathcal O(U)$ be the $\C$-algebra of holomorphic functions on $U$. Equip $\mathcal O(U)$ and $\C[a]$ with the $\C[X]$-algebra structures associated respectively with the element $z\mapsto z$ of $\mathcal O(U)$ and the element $a$ of $\C[a]$. 
+Let $U$ be an open subset of $\C$, let $U'$ be the subset of $A$, which is open by Rouch\'e's Theorem, defined by the condition $\Lambda(a)\subset U$, let $a$ be in $U'$, let $X$ be an indeterminate, let $\mathcal O(U)$ be the $\C$-algebra of holomorphic functions on $U$, and equip $\mathcal O(U)$ and $\C[a]$ with the $\C[X]$-algebra structures associated respectively with the element $z\mapsto z$ of $\mathcal O(U)$ and the element $a$ of $\C[a]$. 
 
-\nn\textbf{Lemma.} (i) \emph{There is a unique $\C[X]$-algebra morphism from $\mathcal O(U)$ to $\C[a]$. We denote this morphism by $f\mapsto f(a)$.}
+\nn\textbf{Theorem 1.} (i) \emph{There is a unique $\C[X]$-algebra morphism from $\mathcal O(U)$ to $\C[a]$. We denote this morphism by $f\mapsto f(a)$.}
 
-\nn(ii) \emph{We have} 
+\nn(ii) \emph{The map $U'\ni a\mapsto f(a)\in A$ is holomorphic.}
+
+\nn(iii) \emph{For any $a$ in $U'$ we have} 
 $$
 f(a)=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{f^{(k)}(\lambda)_\lambda}{k!}\ (a-\lambda)^k.
 $$
 
-\nn\textit{Proof}. By the Chinese Remainder Theorem, $\C[a]$ is isomorphic to the product of $\C[X]$-algebras of the form $\C[X]/(X-\lambda)^m$, with $\lambda\in\C$. So we can assume that $\C[a]$ is of this form, and the lemma follows from the fact that, for any $f$ in $\mathcal O(U)$, there is unique $g$ in $\mathcal O(U)$ such that 
+\nn\textit{Proof of} (i) and (iii). By the Chinese Remainder Theorem, $\C[a]$ is isomorphic to the product of $\C[X]$-algebras of the form $\C[X]/(X-\lambda)^m$, with $\lambda\in\C$. So we can assume that $\C[a]$ is of this form, and the lemma follows from the fact that, for any $f$ in $\mathcal O(U)$, there is unique $g$ in $\mathcal O(U)$ such that 
 $$
 f(z)=\sum_{k=0}^{m-1}\ \frac{f^{(k)}(\lambda)}{k!}\ (z-\lambda)^k+(z-\lambda)^mg(z)
 $$ 
 for all $z$ in $U$. q.e.d.
  
-Say that a \textit{cycle} is a formal finite sum of smooth closed curves. Let $\gamma$ be a cycle in $U\setminus\Lambda(a)$ such that $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(a)$ (where $I(\gamma,\lambda)$ is the winding number of $\gamma$ around $\lambda$), and let $N$ be the set of those $b$ in $A$ such that $\Lambda(b)\subset U$, and that $\gamma$ is a cycle in $U\setminus\Lambda(b)$ satisfying $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(b)$. As already observed, Rouch\'e's Theorem implies that $N$ is an open neighborhood of $a$ in $A$.
+Say that a \textit{cycle} is a formal finite sum of smooth closed curves. Let $\gamma$ be a cycle in $U\setminus\Lambda(a)$ such that $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(a)$ (where $I(\gamma,\lambda)$ is the winding number of $\gamma$ around $\lambda$), and let $N$ be the set of those $b$ in $A$ such that $\Lambda(b)\subset U$, and that $\gamma$ is a cycle in $U\setminus\Lambda(b)$ satisfying $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(b)$. As already observed, Rouch\'e's Theorem implies that $N$ is an open neighborhood of $a$ in $A$. Theorem~2 below will imply Part~(ii) of Theorem~1.
 
-\nn\textbf{Theorem.} \emph{We have  
+\nn\textbf{Theorem 2.} \emph{We have  
 $$
 f(b)=\frac{1}{2\pi i}\int_\gamma\ \frac{f(z)}{z-b}\ dz
 $$
@@ -139,7 +141,7 @@ $$
 $$
 \overset{(**)}{=}f(b),
 $$
-where Equality~$(*)$ follows from the Residue Theorem, and Equality~$(**)$ from Part~(ii) of the lemma. q.e.d.
+where Equality~$(*)$ follows from the Residue Theorem, and Equality~$(**)$ from Part~(iii) of the Theorem~1. q.e.d.
  
 \newpage 
 
