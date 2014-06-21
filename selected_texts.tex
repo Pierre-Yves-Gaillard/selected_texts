@@ -1,28 +1,22 @@
-%\title{Selected Texts}selected-texts-h
+%selected-texts-k
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
-\addtolength{\parskip}{.5\baselineskip}
-\usepackage[a4paper]{geometry}
-%\usepackage[a4paper,hmargin=3cm,vmargin=3.5cm]{geometry}
-\usepackage{amssymb,amsmath}
 \usepackage[T1]{fontenc} 
-\usepackage[utf8]{inputenc}%\usepackage[latin1]{inputenc}
-%\usepackage{tikz}\usepackage{tikz-cd}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage{amssymb,amsmath}
 \usepackage{hyperref}
 \usepackage{datetime}
+\addtolength{\parskip}{.5\baselineskip}
 \title{Selected Texts} 
 \author{Pierre-Yves Gaillard} 
 \date{\today, \currenttime} 
 \newcommand{\C}{\mathbb C} 
 \newcommand{\nn}{\noindent} 
 \newcommand{\so}{\bigskip} 
-\newcommand{\ii}{\hskip1em}
-\newcommand{\f}{\footnotesize} 
 \begin{document} 
 \maketitle 
-
-%Selected Texts 
-I put together four short texts I have written. 
+\nn I put together three short texts I have written. 
 
 \tableofcontents 
 
@@ -74,8 +68,7 @@ b^\perp\cap(E^H)^k=(Hb)^\perp\cap(E^H)^k,
 $$ 
 where $Hb$ is the $H$-orbit of $b$. We will show that $(Hb)^\perp\cap(E^H)^k$ is nonzero. Since the span of $Hb$ in $E^k$ has $E$-dimension at most $|H|<k$, $(Hb)^\perp$ is nonzero. Choose a nonzero vector $x$ in $(Hb)^\perp$ such that $x_i=0$ for the largest number of $i$ as possible among all nonzero vectors in $(Hb)^\perp$. Some coordinate $x_j$ is nonzero in $E$, so by scaling we can assume $x_j=1$ for some $j$. Since the subspace $(Hb)^\perp$ in $E^k$ is stable under the action of $H$, for any $h$ in $H$ we have $hx \in(Hb)^\perp$, so $hx-x\in(Hb)^\perp$. Since $x_j=1$, the $j$-th coordinate of $hx-x$ is $0$, so $hx-x=0$ by the choice of $x$. Since this holds for all $h$ in $H$, $x$ is in $(E^H)^k$.\so
 
-\nn[A] Emil Artin, Galois Theory, Lectures Delivered at the University of Notre Dame, Chapter II: 
-\href{http://projecteuclid.org/euclid.ndml/1175197045}{http://projecteuclid.org/euclid.ndml/1175197045}. 
+\nn[A] Emil Artin, Galois Theory, Lectures Delivered at the University of Notre Dame, Chapter II: \href{http://projecteuclid.org/euclid.ndml/1175197045}{http://projecteuclid.org/euclid.ndml/1175197045}. 
 
 \newpage 
 
@@ -98,13 +91,13 @@ $$
 f(a)=\sum_{\lambda\in\Lambda(a),0\le k<n}\frac{f^{(k)}(\lambda)_\lambda}{k!}\ (a-\lambda)^k.
 $$
 
-\nn\textit{Proof of} (i) and (iii). By the Chinese Remainder Theorem, $\C[a]$ is isomorphic to the product of $\C[X]$-algebras of the form $\C[X]/(X-\lambda)^m$, with $\lambda\in\C$. So we can assume that $\C[a]$ is of this form, and the lemma follows from the fact that, for any $f$ in $\mathcal O(U)$, there is unique $g$ in $\mathcal O(U)$ such that 
+\nn\emph{Proof of} (i) and (iii). By the Chinese Remainder Theorem, $\C[a]$ is isomorphic to the product of $\C[X]$-algebras of the form $\C[X]/(X-\lambda)^m$, with $\lambda\in\C$. So we can assume that $\C[a]$ is of this form, and the lemma follows from the fact that, for any $f$ in $\mathcal O(U)$, there is unique $g$ in $\mathcal O(U)$ such that 
 $$
 f(z)=\sum_{k=0}^{m-1}\ \frac{f^{(k)}(\lambda)}{k!}\ (z-\lambda)^k+(z-\lambda)^mg(z)
 $$ 
 for all $z$ in $U$. q.e.d.
  
-Say that a \textit{cycle} is a formal finite sum of smooth closed curves. Let $\gamma$ be a cycle in $U\setminus\Lambda(a)$ such that $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(a)$ (where $I(\gamma,\lambda)$ is the winding number of $\gamma$ around $\lambda$), and let $N$ be the set of those $b$ in $A$ such that $\Lambda(b)\subset U$, and that $\gamma$ is a cycle in $U\setminus\Lambda(b)$ satisfying $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(b)$. As already observed, Rouch\'e's Theorem implies that $N$ is an open neighborhood of $a$ in $A$. Theorem~2 below will imply Part~(ii) of Theorem~1.
+Say that a \emph{cycle} is a formal finite sum of smooth closed curves. Let $\gamma$ be a cycle in $U\setminus\Lambda(a)$ such that $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(a)$ (where $I(\gamma,\lambda)$ is the winding number of $\gamma$ around $\lambda$), and let $N$ be the set of those $b$ in $A$ such that $\Lambda(b)\subset U$, and that $\gamma$ is a cycle in $U\setminus\Lambda(b)$ satisfying $I(\gamma,\lambda)=1$ for all $\lambda\in\Lambda(b)$. As already observed, Rouch\'e's Theorem implies that $N$ is an open neighborhood of $a$ in $A$. Theorem~2 below will imply Part~(ii) of Theorem~1.
 
 \nn\textbf{Theorem 2.} \emph{We have  
 $$
@@ -112,7 +105,7 @@ f(b)=\frac{1}{2\pi i}\int_\gamma\ \frac{f(z)}{z-b}\ dz
 $$
 for all $f$ in $\mathcal O(U)$ and all $b$ in $N$. In particular the map $b\mapsto f(b)$ from $U'$ to $A$ is holomorphic.}
 
-\nn\textit{Proof}. We have 
+\nn\emph{Proof}. We have 
 $$
 \frac{1}{2\pi i}\int_\gamma\ \frac{f(z)}{z-b}\ dz
 $$
@@ -151,7 +144,7 @@ where Equality~$(*)$ follows from the Residue Theorem, and Equality~$(**)$ from 
 
 Let $P$ be a poset. Assume that all well-ordered subsets of $P$ have an upper bound, and that $P$ has no maximal element. We'll get a contradiction. 
 
-For any pair $I\subset S$ of subsets of $P$, say that $I$ is an \textbf{initial segment} of $S$ if $S\ni s<i\in I$ implies $s\in I$. For any well-ordered subset $W$ of $P$ choose an element $p(W)$ in $P_{>W}$, \textit{i.e.} $p(W)\in P$ and $p(W)>w$ for all $w$ in $W$. Let $\mathcal W$ be the set of those well-ordered subsets $W$ of $P$ such that $p(W_{<w})=w$ [self-explanatory notation] for all $w$ in $W$, and let $U\subset P$ be the union of $\mathcal W$. 
+For any pair $I\subset S$ of subsets of $P$, say that $I$ is an \textbf{initial segment} of $S$ if $S\ni s<i\in I$ implies $s\in I$. For any well-ordered subset $W$ of $P$ choose an element $p(W)$ in $P_{>W}$, \emph{i.e.} $p(W)\in P$ and $p(W)>w$ for all $w$ in $W$. Let $\mathcal W$ be the set of those well-ordered subsets $W$ of $P$ such that $p(W_{<w})=w$ [self-explanatory notation] for all $w$ in $W$, and let $U\subset P$ be the union of $\mathcal W$. 
 
 We claim that $U$ is in $\mathcal W$. This will give the contradiction $U\cup\{p(U)\}\in\mathcal W$. 
 
@@ -167,54 +160,7 @@ To prove (a) let $I$ be the set of those $p$ in $P$ which belong to some initial
 
 Now (b) follows from (a). 
 
-We prove (c). To check that $U$ is well-ordered, let $A$ be a nonempty subset of $U$, choose a $W$ in $\mathcal W$ which meets $A$, let $m$ be the minimum of $W\cap A$, and let $a$ be in $A$. We must show $m\le a$. If such was not the case, (a) would imply $a<m$, in contradiction with (b). It remains to prove $p(U_{<u})=u$ for $u$ in $U$, that is, $U_{<u}\subset W$ for $u\in W\in\mathcal W$. This follows from (b). 
-
-\newpage 
-
-\section{Excerpts from "Set Theory and the Continuum Hypothesis" by Paul Cohen} 
-
-\centerline{\textbf{Main excerpt (definition of truth --- beginning of Section I.4, p. 11)}}
-
-Having now given rules for forming valid statements we come to the problem of identifying these statements with the intuitively ``true'' statements. This discussion will be carried out in the spirit of traditional mathematics, that is to say, outside of any formal language. We shall use some elementary notions of set theory. After we have formalized set theory itself, then of course this discussion can he expressed in that formal system. In our original discussion, we had a finite number of symbols. This was important for foundational purposes, in order to reduce mathematics to a formal game playable by a computing machine. However, for some purposes it is of interest to allow arbitrarily many constant and relation symbols. We write the proofs of Sections 4 and 5 for this more general case.
-
-Assume now that we are dealing with a collection $S$ of statements involving constants $c_\alpha$, $\alpha\in I$, and relation symbols $R_\beta$, $\beta\in J$, where each $R_\beta$ has a fixed number of variables. Let $M$ be a non-empty set and let $c_\alpha\to\overline{c}_\alpha$ be a map from the constant symbols to elements of $M$, not necessarily distinct, and $R_\beta\to\overline{R}_\beta$ a map which associates to a $k$-ary relation symbol, a subset of the $k$-fold direct product, $M\times M\times\cdots\times M$. We shall then say that we have an interpretation of the constants $c_\alpha$ and the relation symbols $R_\beta$ in the set $M$. To every statement using only these constant symbols and relation symbols, we shall associate its ``truth value'' under this interpretation. Intuitively, of course, we merely mean whether or not the statement is true in $M$ under the given interpretation of the constant and relation symbols. However, a precise definition is easy to give if we proceed by induction on the length of formulas. 
-
-\nn DEFINITION. Let $A$ be a formula with free variables among $x_1,\dots,x_n$, $n \ge 0$, and let $\overline{x}_1, \dots, \overline{x}_n$ be elements of $M$. We define the truth value of $A$ (in $M$) at $\overline{x}_1,\dots,\overline{x}_n$.
-
-\nn 1. If $A$ is of the form $x_i=x_j$, $x_i=c$, or $c_i=c_j$, then $A$ is true at $\overline{x}_1,\dots,\overline{x}_n$ if $\overline{x}_i=\overline{x}_j$, $\overline{x}_i=\overline{c}$, or $\overline{c}_i=\overline{c}_j$, respectively. 
-
-\nn 2. If $A$ is $R(t_1,\dots,t_m)$ where $R$ is an $m$-ary relation symbol and each $t_i$ is a constant symbol or one of the $x_1,\dots,x_n$, then $A$ is true at $\overline{x}_1,\dots,\overline{x}_n$ if the $m$-tuple $\langle\overline{t}_1,\dots,\overline{t}_m\rangle$ is in $\overline{R}$ (the subset of $M^m$ associated with $R$ under the given interpretation).
-
-\nn 3. If $A$ is a propositional function of formulas, we evaluate the truth of $A$ at $\overline{x}_1,\dots,\overline{x}_n$ by means of the propositional calculus. 
-
-\nn 4. If $A$ is of the form $(\forall y)B(y,x_1,\dots,x_n)$ [resp. $(\exists y)B(y,x_1,\dots,x_n)$] then $A$ is true at $\overline{x}_1,\dots,\overline{x}_n$ if, for all $\overline{y}$ in $M$ [resp. for some $\overline{y}$ in $M$] $B(y,x_1,\dots,x_n)$ is true at $\overline{y},\overline{x}_1,\dots,\overline{x}_n$.\bigskip
-
-\centerline{*}%\bigskip
-
-\centerline{\textbf{Other excerpts}}
-
-It should be emphasized that these functions are ``real" mathematical objects and not objects of any formal system \dots [Section I.7, p. 26.] 
-
-The theorems of the previous section are not results about what can be proved in particular axiom systems; they are absolute statements about functions. [Section I.9, p.~39.] 
-
-We have now arrived at a rather peculiar situation. On the one hand $\sim\kern-1ex A$ is not provable in $Z_1$ and yet we have just given an informal proof that $\sim\kern-1ex A$ is true. (There is no contradiction here since we have merely shown that the proofs in $Z_1$ do not exhaust the set of all acceptable arguments.) [Section I.9, p. 41.] 
-
-The requirement that the axioms be given recursively is essential; otherwise we could take for $\Sigma$ the set of all true statements of $Z_1$. [Section I.10, p. 45.]\bigskip
-
-\centerline{*}\bigskip
-
-\centerline{\textbf{An excerpt from Kleene}}%\nopagebreak
-
-The terms: $0, 0', 0''$, \dots, which represent the particular natural numbers under the interpretation of the system, we call \textit{numerals}, and we abbreviate them by the same symbols ``0'',  ``1'',  ``2'', \dots, respectively, as we use for natural numbers intuitively (\dots). Moreover, whenever we have introduced an italic letter, such as ``$x$'', to designate an intuitive natural number, then the corresponding bold italic letter ``$\pmb{x}$'' shall designate the corresponding 
-numeral $0^{(x)}$, i.e. $0^{'\cdots'}$ with $x$ accents ($x\ge0$) \dots\smallskip
-
-Let $P(x_1,\dots,x_n)$ be an intuitive number-theoretic predicate. We say that $P(x_1,\dots,x_n)$ is \textit{numeralwise expressible} in the formal system, if there is a formula $\mbox{P}(\mbox{x}_1,\dots,\mbox{x}_n)$ with no free variables other than the distinct variables $\mbox{x}_1,\dots,\mbox{x}_n$ such that, for each particular $n$-tuple of natural numbers $x_1,\dots,x_n$, \smallskip
-
-(i) \ if $P(x_1,\dots,x_n)$ is true, then $\mbox{P}(\pmb{x}_1,\dots,\pmb{x}_n)$ is provable, and \smallskip
-
-(ii) if $P(x_1,\dots,x_n)$ is false, then ``not $\mbox{P}(\pmb{x}_1,\dots,\pmb{x}_n)$'' is provable. 
-
-\nn[\S\ 41, p. 195, Kleene S.; \textbf{Introduction to Metamathematics}, New York, Van Nostrand 1952.]
+We prove (c). To check that $U$ is well-ordered, let $A$ be a nonempty subset of $U$, choose a $W$ in $\mathcal W$ which meets $A$, let $m$ be the minimum of $W\cap A$, and let $a$ be in $A$. We must show $m\le a$. If such was not the case, (a) would imply $a<m$, in contradiction with (b). It remains to prove $p(U_{<u})=u$ for $u$ in $U$, that is, $U_{<u}\subset W$ for $u\in W\in\mathcal W$. This follows from (b).
 
 \newpage 
 
@@ -232,9 +178,7 @@ Let $P(x_1,\dots,x_n)$ be an intuitive number-theoretic predicate. We say that $
 
 \href{https://www.mediafire.com/folder/9qczh1q96jo3q/Selected_Texts}{https://www.mediafire.com/folder/9qczh1q96jo3q/Selected\_Texts} 
 
-\nn$\bullet$ at DropBox in tex and pdf format: 
-
-\href{https://www.dropbox.com/sh/a8oluhc7uxvsl5k/w3PwJvbD61}{https://www.dropbox.com/sh/a8oluhc7uxvsl5k/w3PwJvbD61}
+\nn$\bullet$ at DropBox in tex and pdf format: \href{http://goo.gl/E312mo}{http://goo.gl/E312mo}
 
 \nn$\bullet$ at Box in tex and pdf format: 
 
@@ -243,19 +187,4 @@ Let $P(x_1,\dots,x_n)$ be an intuitive number-theoretic predicate. We say that $
 \nn$\bullet$ at Mega in tex and pdf format: 
 
 \href{https://mega.co.nz/#F!iFRzUTwB!YvVwsTt5jAOEy6OBLcFriQ}{https://mega.co.nz/\#F!iFRzUTwB!YvVwsTt5jAOEy6OBLcFriQ}
-
-%\nn$\bullet$ at writeLaTeX in tex and pdf format:
-
-%\href{https://www.writelatex.com/read/qzprktxnzmps}{https://www.writelatex.com/read/qzprktxnzmps} 
-
-%\nn$\bullet$ at figshare in pdf format:
-
-%\href{http://figshare.com/articles/Selected_Texts_pdf_/731674}{http://figshare.com/articles/Selected\_Texts\_pdf\_/731674} 
-
-%\nn$\bullet$ at figshare in tex format:
-
-%\href{http://figshare.com/articles/Selected_Texts_tex_/731673}{http://figshare.com/articles/Selected\_Texts\_tex\_/731673} 
-
-%\nn$\bullet$ at WordPress in pdf format:\\\href{http://gaillardpy.wordpress.com/2013/06/26/selected-texts/}{http://gaillardpy.wordpress.com/2013/06/26/selected-texts/} 
-
 \end{document}
