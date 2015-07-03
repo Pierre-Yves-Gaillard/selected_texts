@@ -1,4 +1,4 @@
-%selected-texts-k
+%selected-texts-l
 % !TEX encoding = UTF-8 Unicode
 \documentclass[12pt]{article}
 \usepackage[T1]{fontenc} 
@@ -144,23 +144,25 @@ where Equality~$(*)$ follows from the Residue Theorem, and Equality~$(**)$ from 
 
 Let $P$ be a poset. Assume that all well-ordered subsets of $P$ have an upper bound, and that $P$ has no maximal element. We'll get a contradiction. 
 
-For any pair $I\subset S$ of subsets of $P$, say that $I$ is an \textbf{initial segment} of $S$ if $S\ni s<i\in I$ implies $s\in I$. For any well-ordered subset $W$ of $P$ choose an element $p(W)$ in $P_{>W}$, \emph{i.e.} $p(W)\in P$ and $p(W)>w$ for all $w$ in $W$. Let $\mathcal W$ be the set of those well-ordered subsets $W$ of $P$ such that $p(W_{<w})=w$ [self-explanatory notation] for all $w$ in $W$, and let $U\subset P$ be the union of $\mathcal W$. 
+For any pair $I\subset S$ of subsets of $P$, say that $I$ is an \textbf{initial segment} of $S$ if $S\ni s<i\in I$ implies $s\in I$. 
 
-We claim that $U$ is in $\mathcal W$. This will give the contradiction $U\cup\{p(U)\}\in\mathcal W$. 
+For any well-ordered subset $W$ of $P$ choose an element $p(W)$ in $P_{>W}$, \emph{i.e.} $p(W)\in P$ and $p(W)>w$ for all $w$ in $W$. Let $\mathcal W$ be the set of those well-ordered subsets $W$ of $P$ such that $p(W_{<w})=w$ [self-explanatory notation] for all $w$ in $W$, and let $U\subset P$ be the union of $\mathcal W$. 
 
-We have: 
+We claim
 
 (a) if $W,X$ are in $\mathcal W$, then $W$ is an initial segment of $X$, or $X$ is an initial segment of $W$; in particular $U$ is totally ordered;
 
-(b) any $W\in\mathcal W$ is an initial segment of $U$; 
+(b) any $W\in\mathcal W$ is an initial segment of $U$;
 
 (c) $U$ is in $\mathcal W$.
+
+Item (c) will give the contradiction $U\cup\{p(U)\}\in\mathcal W$.
 
 To prove (a) let $I$ be the set of those $p$ in $P$ which belong to some initial segment common to $W$ and $X$. Then $I$ is the largest such initial segment. Moreover $I$ is equal to $W$ or to $X$ because otherwise $I\cup\{p(I)\}$ would contradict the maximality of $I$, for, $W$ and $X$ being well-ordered, we would have $W_{<w}=I=X_{<x}$ for some $w$ in $W$ and some $x$ in $X$, yielding $w=p(I)=x$. 
 
 Now (b) follows from (a). 
 
-We prove (c). To check that $U$ is well-ordered, let $A$ be a nonempty subset of $U$, choose a $W$ in $\mathcal W$ which meets $A$, let $m$ be the minimum of $W\cap A$, and let $a$ be in $A$. We must show $m\le a$. If such was not the case, (a) would imply $a<m$, in contradiction with (b). It remains to prove $p(U_{<u})=u$ for $u$ in $U$, that is, $U_{<u}\subset W$ for $u\in W\in\mathcal W$. This follows from (b).
+We prove (c). To check that $U$ is well-ordered, let $A$ be a nonempty subset of $U$, choose a $W$ in $\mathcal W$ which meets $A$, let $m$ be the minimum of $W\cap A$, and let $a$ be in $A$. We must show $m\le a$. If such was not the case, (a) would imply $a<m$, in contradiction with (b). So, $U$ is well-ordered, and it only remains to prove $p(U_{<u})=u$ for $u$ in $U$, that is, $U_{<u}\subset W$ for $u\in W\in\mathcal W$. This follows from (b).
 
 \newpage 
 
